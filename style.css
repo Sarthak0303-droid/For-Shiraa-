@@ -150,10 +150,31 @@ button:active{
 }
 
 #heroPhoto{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    filter:brightness(.82);
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+animation:zoomPhoto 18s linear infinite alternate;
+
+filter:brightness(.75);
+
+}
+
+@keyframes zoomPhoto{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.12);
+
 }
 
 .heroText{
