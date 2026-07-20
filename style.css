@@ -136,7 +136,8 @@ button:active{
 =========================== */
 
 #hero{
-    background:#000;
+    background:linear-gradient(180deg,#090312,#3b0b54);
+
 }
 
 .overlay{
