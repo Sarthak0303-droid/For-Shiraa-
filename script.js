@@ -347,3 +347,25 @@ c.remove();
 // =========================
 
 show(intro);
+
+function shootingStar(){
+
+const s=document.createElement("div");
+
+s.className="shooting-star";
+
+s.style.top=Math.random()*40+"vh";
+
+s.style.left=window.innerWidth+"px";
+
+document.getElementById("shooting-stars").appendChild(s);
+
+setTimeout(()=>{
+
+s.remove();
+
+},2200);
+
+}
+
+setInterval(shootingStar,5000);
