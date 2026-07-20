@@ -1,0 +1,273 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:#090312;
+    color:#fff;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+section{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:opacity .8s ease,transform .8s ease;
+}
+
+.hidden{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(1.05);
+}
+
+/* ===========================
+   STARRY BACKGROUND
+=========================== */
+
+#stars{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.8) 1px,transparent 2px),
+    radial-gradient(circle at 80% 40%,rgba(255,255,255,.6) 1px,transparent 2px),
+    radial-gradient(circle at 30% 70%,rgba(255,255,255,.7) 1px,transparent 2px),
+    linear-gradient(180deg,#090312,#1b0631,#3b0b54);
+    background-size:220px 220px,300px 300px,180px 180px,100% 100%;
+    animation:moveStars 80s linear infinite;
+}
+
+@keyframes moveStars{
+    from{
+        background-position:0 0,0 0,0 0,0 0;
+    }
+    to{
+        background-position:-400px 700px,300px -500px,-250px 500px,0 0;
+    }
+}
+
+/* ===========================
+   GLASS
+=========================== */
+
+.glass{
+    width:min(90%,720px);
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:68px;
+    margin-bottom:15px;
+}
+
+h2{
+    font-family:'Great Vibes',cursive;
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+h3{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+p{
+    line-height:1.9;
+    font-size:18px;
+    color:#f6f6f6;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button{
+    margin-top:30px;
+    padding:16px 38px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:700;
+    background:linear-gradient(135deg,#ff4d88,#ff7aa2);
+    color:#fff;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(255,77,136,.35);
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.04);
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+#hero{
+    background:#000;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.65)
+    );
+}
+
+#heroPhoto{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.82);
+}
+
+.heroText{
+    position:absolute;
+    text-align:center;
+    width:min(90%,650px);
+    z-index:3;
+}
+
+/* ===========================
+   LETTER
+=========================== */
+
+.letterCard{
+    width:min(92%,760px);
+    background:#fff;
+    color:#333;
+    border-radius:28px;
+    padding:45px;
+    box-shadow:0 25px 80px rgba(0,0,0,.4);
+}
+
+.letterCard h2{
+    color:#ff4d88;
+}
+
+.letterCard p{
+    color:#444;
+    min-height:260px;
+}
+
+/* ===========================
+   MUSIC
+=========================== */
+
+.musicCard{
+    width:min(90%,520px);
+    padding:45px;
+    border-radius:25px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    text-align:center;
+}
+
+audio{
+    width:100%;
+    margin-top:20px;
+}
+
+/* ===========================
+   ROSE
+=========================== */
+
+.roseContainer{
+    text-align:center;
+}
+
+#rose{
+    font-size:110px;
+    margin-bottom:30px;
+}
+
+#heart{
+    font-size:95px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+#heart:hover{
+    transform:scale(1.15);
+}
+
+/* ===========================
+   FINAL
+=========================== */
+
+.finalCard{
+    width:min(90%,760px);
+}
+
+.finalCard p{
+    margin-top:20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:700px){
+
+h1{
+    font-size:52px;
+}
+
+h2{
+    font-size:42px;
+}
+
+h3{
+    font-size:23px;
+}
+
+p{
+    font-size:16px;
+}
+
+.glass,
+.letterCard,
+.musicCard{
+    padding:30px;
+}
+
+button{
+    width:100%;
+}
+
+}
